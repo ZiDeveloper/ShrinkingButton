@@ -1,16 +1,13 @@
-[
-{
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+[{
+  "modid": "shrinkingbutton",
+  "name": "Shrinking Button Addon",
+  "description": "This Mod is an extention for the Resize Potion Mod. It will add an extra button into your inventory which will allow you to shrink yourself as you wish. Perfect when using LittleTiles Mod. Never misplaced 1/64s",
+  "version": "1.0.0.1122",
+  "mcversion": "1.12.2",
+  "requiredMods": [ "resize", "artemislib" ],
   "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
-]
+  "url": "https://github.com/ZiDeveloper/ShrinkingButton",
+  "updateJSON": "",
+  "authorList": ["ZiDeveloper", "WarriorOfSneak"],
+  "credits": "The Forge and FML guys, Camellias_, zabi94 and MineMaarten."
+}]
