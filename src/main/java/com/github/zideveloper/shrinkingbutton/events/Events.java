@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.client.config.GuiButtonExt;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+
 public class Events{
 	
 	private int left;
@@ -18,8 +19,7 @@ public class Events{
 	
 	private GuiContainer gui;
 	private GuiButtonExt guiButton;
-	
-	
+
 	@SubscribeEvent
 	protected void guiPostInit(GuiScreenEvent.InitGuiEvent.Post event)
 	{
@@ -29,7 +29,8 @@ public class Events{
 			this.left = this.gui.getGuiLeft();
 			this.height = this.gui.height;
 			
-			if(this.gui instanceof GuiContainerCreative) {
+			if(this.gui instanceof GuiContainerCreative) 
+			{
 				this.yPosDifference = 44;
 			}else {
 				this.yPosDifference = 22;
@@ -41,13 +42,16 @@ public class Events{
 	}
 	
 	@SubscribeEvent
-	protected void actionPerformed(GuiScreenEvent.ActionPerformedEvent.Post event){	
-		
-		this.left = this.gui.getGuiLeft();
-		this.guiButton.x = (this.left + 134);
-		
-		if(event.getButton().id == 13 && (event.getGui() instanceof GuiContainerCreative || event.getGui() instanceof GuiInventory)) {
-			NetworkHandler.sendMessageToServer(new PacketShrink());
+	protected void actionPerformed(GuiScreenEvent.ActionPerformedEvent.Post event)
+	{			
+		if((event.getGui() instanceof GuiContainerCreative || event.getGui() instanceof GuiInventory)) 
+		{		
+			this.left = this.gui.getGuiLeft();
+			this.guiButton.x = (this.left + 134);
+			
+			if(event.getButton().id == 13) {
+				NetworkHandler.sendMessageToServer(new PacketShrink());
+			}
 		}
 	}
 	

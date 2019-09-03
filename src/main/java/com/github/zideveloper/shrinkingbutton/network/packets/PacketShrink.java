@@ -15,20 +15,21 @@ public class PacketShrink extends PacketBase<PacketShrink> {
 	public void toBytes(ByteBuf buf) {}
 
 	@Override
-	public void handleClientSide(PacketShrink message, EntityPlayer player) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void handleClientSide(PacketShrink message, EntityPlayer player) {}
 
 	@Override
-	public void handleServerSide(PacketShrink message, EntityPlayer player) {
+	public void handleServerSide(PacketShrink message, EntityPlayer player) 
+	{
 		PotionEffect effect = player.getActivePotionEffect(Main.SHRINKING);
 
-		if(effect == null) {
+		if(effect == null)
+		{
 			player.addPotionEffect(new PotionEffect(Main.SHRINKING, 9999, 0, true, false));
-		}else if(effect.getAmplifier() == 0) {
+		}else if(effect.getAmplifier() == 0) 
+		{
 			player.addPotionEffect(new PotionEffect(Main.SHRINKING, 9999, 1, true, false));
-		}else {
+		}else 
+		{
 			player.removePotionEffect(Main.SHRINKING);
 		}
 	}

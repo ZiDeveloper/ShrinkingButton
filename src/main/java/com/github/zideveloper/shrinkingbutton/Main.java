@@ -12,23 +12,21 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.github.zideveloper.shrinkingbutton.events.Events;
 import com.github.zideveloper.shrinkingbutton.network.NetworkHandler;
 
-@Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 
+@Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main
 {
     public static final String MODID = "shrinkingbutton";
     public static final String NAME = "Shrinking Button Addon";
     public static final String VERSION = "1.2-1.12.2";
     public static final String ACCEPTED_VERSIONS = "[1.12.2]";
-    public static final String[] CREDITS = {"Camellias_","zabi94","MineMaarten"};
+    public static final String[] CREDITS = {"Camellias_", "zabi94", "MineMaarten"};
     
     public static final String CLIENT_PROXY_CLASS = "com.github.zideveloper.shrinkingbutton.ProxyClient";
     public static final String COMMON_PROXY_CLASS = "com.github.zideveloper.shrinkingbutton.ProxyCommon";
-
     
     @Instance 
     public static Main instance;
-    
     
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = COMMON_PROXY_CLASS)
     public static ProxyCommon proxy;
@@ -47,7 +45,5 @@ public class Main
     }
     
     @EventHandler 
-    public static void postInit(FMLPostInitializationEvent event) 
-    {
-    }
+    public static void postInit(FMLPostInitializationEvent event) {}
 }

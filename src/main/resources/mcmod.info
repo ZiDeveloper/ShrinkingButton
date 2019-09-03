@@ -1,7 +1,7 @@
 [{
   "modid": "shrinkingbutton",
   "name": "Shrinking Button Addon",
-  "description": "This Mod is an extention for the Resize Potion Mod. It will add an extra button into your inventory which will allow you to shrink yourself as you wish. Perfect when using LittleTiles Mod. Never misplaced 1/64s",
+  "description": "This Mod is an extention for the Resizing Potion Mod. It will add an extra button into your inventory which will allow you to shrink yourself as you wish. Perfect when using LittleTiles Mod. Never misplaced 1/64s",
   "version": "1.0.0.1122",
   "mcversion": "1.12.2",
   "requiredMods": [ "resize", "artemislib" ],
